@@ -1,9 +1,10 @@
 <script>
-	import { Canvas, OrbitControls, Three } from '@threlte/core';
-	import { AmbientLight, DirectionalLight, PerspectiveCamera } from 'three';
+	import { T, Canvas, OrbitControls, Three } from '@threlte/core';
+	import { AmbientLight, DirectionalLight, Mesh, MeshStandardMaterial, PerspectiveCamera } from 'three';
 	import { degToRad } from 'three/src/math/MathUtils';
 
-	import { Environment, GLTF } from '@threlte/extras';
+	import { GLTF } from '@threlte/extras';
+	import { DEG2RAD } from 'three/src/math/MathUtils'
 
 	export let isRotating = false;
 
@@ -16,23 +17,24 @@
 	</button>
 
 	<Canvas>		
-		<Three type={PerspectiveCamera} makeDefault position={[2.25, 0.8, 10]} fov={24}>
+		<Three type={PerspectiveCamera} makeDefault position={[0.35, 0, 1]} fov={24}>
 			<OrbitControls
 				autoRotate={isRotating}
 				maxPolarAngle={degToRad(90)}
-				enableZoom={false}
 				enableRotate={isRotating}
+				enableZoom={isRotating}
+				maxDistance={18}
+				minDistance={12.5}
+				enableDamping
 				{target}
 			/>
 		</Three>
 
-		<!-- <Three type={DirectionalLight} castShadow position={[3, 10, 10]} />
-		<Three type={DirectionalLight} position={[-3, 10, -10]} intensity={0.2} />
-		<Three type={AmbientLight} intensity={0.2} /> -->
 		<Three type={DirectionalLight} castShadow position={[3, 10, 10]} />
 		<Three type={DirectionalLight} position={[-3, 10, -10]} intensity={0.2} />
 		<Three type={AmbientLight} intensity={0.2} />
-		<GLTF castShadow url="/models/sofa-margot.glb" interactive scale={0.02} />
+		
+		<GLTF castShadow url="/models/sofa-aidian-corner.glb" interactive scale={0.015} receiveShadow />
 	</Canvas>
 </div>
 

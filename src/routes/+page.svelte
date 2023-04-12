@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/Button.svelte';
 	import Product3DModel from '$lib/components/Product3DModel.svelte';
 
-	$: isRotating = false;
+	$: isRotating = true;
 </script>
 
 <div id="app">
@@ -10,10 +10,10 @@
 		<Product3DModel {isRotating} />
 	</div>
 	<div id="details">
-		<span>CÓDIGO: 42404</span>
-		<h1>Sofá Margot II - Rosé</h1>
-		<h2>R$ 4.000</h2>
-		<Button>Adicionar à cesta</Button>
+		<span>CODE: 42404</span>
+		<h1>Sofá Aidian Corner II - Grey</h1>
+		<h2>US$ 4.000</h2>
+		<Button>Add to cart</Button>
 	</div>
 </div>
 

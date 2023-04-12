@@ -3,7 +3,7 @@
 </div>
 
 # 3D Product Preview
-3D Product Preview is a web application that allows users to preview the "Margot II Rose" sofa in 3D before making a purchase. With a modern and intuitive interface, the platform offers an immersive and interactive experience, enabling users to view the product in 3D.
+3D Product Preview is a web application that allows users to preview the "Aidian Corner II" sofa in 3D before making a purchase. With a modern and intuitive interface, the platform offers an immersive and interactive experience, enabling users to view the product in 3D.
 
 It was developed with a didactic approach to learn about the ThreeJS library and how to create real-time 3D model visualizations using JavaScript.
 
